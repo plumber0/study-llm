@@ -48,3 +48,29 @@
     - `Specify Prompt` -> `Call model`
     - many unstructured data applications text application, vision technology
     - not good for structured data 
+
+- Classification
+  - first classify the type of query and then use that classification to determine which instrucinont to use.
+
+- Moderation
+  - OpenAI Moderation API
+  - Prompt Injections
+    - it can lead to unintended AI system usage so it's important to detect and prevent them to ensure responsible and cost-effective applications
+    - two strategies
+      - using delimeters and clear instructions in the system message
+      - using an additional prompt which asks if the user is trying to carry out a prompt injection
+
+- Process Inputs: Chain of Thought Reasonging
+  - model might make reasoning errors by rushing to an incorrect conclusion, so we can reframe the query to request a series of relevant reasoning steps before the model provides a final answer, so that it can think longer and more methodically about the problem
+
+- Process Inputs: Chaining Prompts
+  - instead of describing a whole complex workflow in dozens of bullet points or several paragraphs in one prompt like in the previous video,\
+  - it might be better to keep track of the state externally and then inject relevant tinstructions as needed.
+  - one additinal benefit is that it also allows the model to use external tools at certain points of the workflow if necessary
+  - for example it might decide to look something up in product catalog or call an API search a knowledge base, something that could not be achieved with a single prompt.
+
+- Check outputs
+  - use moderation API for outputs, and additional prompts to tme model to evaluate output quality 
+  - it would also increase the latency and cost of system,
+
+- Evaluation
