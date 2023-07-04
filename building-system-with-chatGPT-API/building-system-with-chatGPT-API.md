@@ -74,3 +74,12 @@
   - it would also increase the latency and cost of system,
 
 - Evaluation
+  - part 1
+      - Tune prompts on handful of examples
+      - Add additional `tricky` examples opportunistically
+      - Develop metrics to measure performance on examples
+      - Collect randomly sampled set of examples to tune to (development set/hold-out cross validation set)
+      - Collect and use a hold-out test set
+  - part 2
+    - Evaluate the LLM's answer to the user with a rubric, based on the extracted product information
+    - Evaluate the LLM's answer to the user based on an "ideal" / "expert" (human generated) answer. (use OpenAI evals)
