@@ -1,0 +1,11 @@
+- Introduction  
+  - LLM app을 만드는데 사용하는 framework
+  - 관련 필드에서 app을 만드는데 common abstraction을 보았고 이를 LangChain으로 구현
+  - 관련 필드에서 빠르게 adopt되어 사용되어 지고 있음
+  - python, js(ts) 패키지 존재
+  - combine components
+
+- Models, Prompts and Parsers
+  - models : llm
+  - prompts : input 전에 처리과정
+  - parsers : output 후에 처리과정
