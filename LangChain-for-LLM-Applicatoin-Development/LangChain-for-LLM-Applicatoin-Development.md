@@ -36,4 +36,35 @@
 
   you can also store the conversation in a conventional database(such as SQL)
 
+- Chains in LangChain
+  - Building block of LangChain
+  - The chain usually combines an LLM, large language model, together with a prompt, and with this building block you can also put a bunch of these building blocks together to carry out a sequence of operations on your text or on your other data. 
+  - LLMChain
+  - Sequential Chains
+    - SimpleSequentialChain
+    - SequentialChain
+  - RouterChain
 
+- Question and Answer
+  - one of most powerful app that can built with llm is answer question on top of document
+  - LLM can only inspect a few thousand words at a time
+  - Embeddings Vector
+    - Embedding vector captures content/meaning
+    - Text with similar content will have similar vectors
+    - this let us compare pieces of text in the vector space
+  - Vector Database
+    1. chop it to small chunks from document
+    2. create embedding for each of these chunks
+    3. store those in a vector database with index
+    4. when query comes in first create an embedding for that query
+    5. compare all the vectors in the database and pick the most similar
+
+  - stuff method
+    - stuffing is the simplest method. you simply stuff all data into the prompt as context to pass to the language model'
+      - pros : it makes a single call to the llm. the llm has access to all the data at once
+      - cons : llms have a context length, and for large documents or many documents this will not work as it will result in a prompt larger than the context length
+
+     
+  - map reduce
+  - refine
+  - map rerank
